@@ -1,0 +1,38 @@
+<body>
+  <div id="clockdiv">
+
+    {{#if ended}}
+
+      <h1>You're out of time!</h1>
+
+    {{else}}
+
+      <h1>Countdown Clock</h1>
+
+    {{> cdown}} {{/if}}
+
+  </div>
+  {{> team }}
+
+</body>
+
+<template name="cdown">
+  <div>
+    <span class="minutes">{{getMins}}</span>
+    <div class="smalltext">Minutes</div>
+  </div>
+  <div>
+    <span class="seconds">{{getSeconds}}</span>
+
+    <div class="smalltext">Seconds</div>
+
+  </div>
+</template>
+<template name="team">
+  <br>
+  <br>
+  <br>
+  <h2>{{name}}</h2>
+  <button>Next</button>
+  
+</template>
